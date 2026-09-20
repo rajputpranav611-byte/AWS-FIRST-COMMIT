@@ -96,7 +96,7 @@ npm run dev
 
 ## Team
 
-[Your name] — [University name]
+[Stack Avengers] — [Parul University]
 
 ## License
 
