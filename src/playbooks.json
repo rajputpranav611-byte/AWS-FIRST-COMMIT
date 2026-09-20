@@ -1,0 +1,98 @@
+[
+    {
+      "id": "digital_arrest",
+      "name": "Fake CBI/Police Digital Arrest",
+      "markers": ["digital arrest", "skype", "cbi", "supreme court", "money laundering", "fir", "aadhaar misused"],
+      "escalation": "Threatening immediate arrest over fake charges unless a 'security deposit' is transferred.",
+      "truth": "Indian law enforcement agencies never conduct 'digital arrests' over Skype/WhatsApp or ask for security deposits.",
+      "severity": "critical"
+    },
+    {
+      "id": "customs_seizure",
+      "name": "Fake Customs / Parcel Seizure",
+      "markers": ["fedex", "dhl", "customs", "narcotics", "illegal items", "parcel seized", "taiwan"],
+      "escalation": "Claiming a parcel in your name contains drugs/passports and demanding clearance fees.",
+      "truth": "Customs officials do not call individuals demanding money to release seized parcels.",
+      "severity": "critical"
+    },
+    {
+      "id": "upi_refund",
+      "name": "UPI Refund / Receive Money",
+      "markers": ["enter pin to receive", "refund processed", "click to get money", "scan qr to receive"],
+      "escalation": "Tricking the victim into entering their UPI PIN under the guise of receiving a refund.",
+      "truth": "UPI PIN is only required to SEND money, NEVER to receive money.",
+      "severity": "critical"
+    },
+    {
+      "id": "bank_kyc",
+      "name": "Fake Bank KYC Update",
+      "markers": ["pan update", "account blocked", "kyc suspended", "update within 24 hours", "click link to unblock"],
+      "escalation": "Sending malicious links to steal internet banking credentials for 'KYC verification'.",
+      "truth": "Banks never send SMS with generic links asking to update KYC or threatening immediate account blockage.",
+      "severity": "high"
+    },
+    {
+      "id": "loan_app",
+      "name": "Loan App Harassment",
+      "markers": ["repay immediately", "morphed photos", "contacts", "legal notice", "defaulted"],
+      "escalation": "Extorting money by threatening to send morphed photos to the victim's contacts.",
+      "truth": "These are illegal apps. Do not pay. Report to the police immediately.",
+      "severity": "critical"
+    },
+    {
+      "id": "job_offer",
+      "name": "Fake Job Offer / Advance Fee",
+      "markers": ["wfh", "part time", "youtube likes", "registration fee", "security deposit", "hr"],
+      "escalation": "Offering a high-paying easy job but asking for an initial fee or investment.",
+      "truth": "Legitimate employers never ask candidates to pay money or 'invest' to get a job.",
+      "severity": "high"
+    },
+    {
+      "id": "sim_swap",
+      "name": "SIM Swap / OTP Phishing",
+      "markers": ["5g upgrade", "sim block", "e-sim", "forward this sms", "dial *401*"],
+      "escalation": "Tricking the victim into forwarding OTPs or activating call forwarding.",
+      "truth": "Telecom operators do not ask you to dial *401* (call forwarding) or share OTPs for upgrades.",
+      "severity": "critical"
+    },
+    {
+      "id": "electricity_bill",
+      "name": "Electricity Bill Disconnection",
+      "markers": ["power will be disconnected", "tonight 9:30 pm", "update bill", "call electricity officer"],
+      "escalation": "Threatening power cut tonight and sharing a number/app to pay immediately.",
+      "truth": "Electricity boards never send SMS from personal numbers threatening immediate nighttime disconnections.",
+      "severity": "high"
+    },
+    {
+      "id": "romance_scam",
+      "name": "Matrimonial / Romance Scam",
+      "markers": ["stuck at customs", "gift for you", "medical emergency", "flight ticket", "need money"],
+      "escalation": "Building a relationship online and then suddenly asking for money due to a fake emergency.",
+      "truth": "Never send money to someone you have only met online, regardless of the story.",
+      "severity": "medium"
+    },
+    {
+      "id": "income_tax",
+      "name": "Fake Income Tax Notice",
+      "markers": ["tax refund", "itr notice", "penalty", "click to claim refund"],
+      "escalation": "Sending phishing links claiming a tax refund is pending.",
+      "truth": "The Income Tax Department only communicates via the official e-filing portal and doesn't ask for bank details via SMS links.",
+      "severity": "high"
+    },
+    {
+      "id": "lottery_scam",
+      "name": "Fake Lottery / Prize Winning",
+      "markers": ["kbc lottery", "whatsapp lucky draw", "won 25 lakhs", "pay tax to claim"],
+      "escalation": "Claiming the victim won a huge amount but must pay 'tax' or 'processing fee' first.",
+      "truth": "You cannot win a lottery you did not enter, and you never have to pay upfront to claim real winnings.",
+      "severity": "high"
+    },
+    {
+      "id": "courier_customs",
+      "name": "Courier Customs Duty Scam",
+      "markers": ["international parcel", "customs duty", "pay online", "clearance fee"],
+      "escalation": "Demanding online payment to clear an unexpected international parcel.",
+      "truth": "Official customs duties are collected via the postal service or official courier channels, not random WhatsApp links.",
+      "severity": "high"
+    }
+]

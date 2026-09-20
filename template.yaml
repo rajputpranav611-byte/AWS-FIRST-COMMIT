@@ -1,0 +1,86 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Raksha - AI Agent for Indian Scam Detection
+
+Parameters:
+  GeminiApiKey:
+    Type: String
+    NoEcho: true
+    Description: Gemini API key, passed at deploy time, never committed to source
+
+Resources:
+  CasesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: caseId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: caseId
+          KeyType: HASH
+
+  StorageBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - "*"
+            AllowedMethods:
+              - GET
+              - PUT
+              - POST
+              - HEAD
+            AllowedOrigins:
+              - "*"
+            MaxAge: 3000
+
+  RakshaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Timeout: 60
+      MemorySize: 1024
+      Environment:
+        Variables:
+          CASES_TABLE: !Ref CasesTable
+          STORAGE_BUCKET: !Ref StorageBucket
+          GEMINI_API_KEY: !Ref GeminiApiKey
+      FunctionUrlConfig:
+        AuthType: NONE
+        Cors:
+          AllowOrigins:
+            - "*"
+          AllowMethods:
+            - "*"
+          AllowHeaders:
+            - "*"
+      Policies:
+        - AmazonBedrockFullAccess
+        - Statement:
+            - Effect: Allow
+              Action:
+                - transcribe:*
+              Resource: "*"
+            - Effect: Allow
+              Action:
+                - polly:SynthesizeSpeech
+              Resource: "*"
+            - Effect: Allow
+              Action:
+                - aws-marketplace:Subscribe
+                - aws-marketplace:Unsubscribe
+                - aws-marketplace:ViewSubscriptions
+              Resource: "*"
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CasesTable
+        - S3CrudPolicy:
+            BucketName: !Ref StorageBucket
+
+Outputs:
+  RakshaApiUrl:
+    Description: "API endpoint URL for Raksha"
+    Value: !GetAtt RakshaFunctionUrl.FunctionUrl
