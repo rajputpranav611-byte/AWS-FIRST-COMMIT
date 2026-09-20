@@ -7,8 +7,8 @@ tells you — in Hindi, with voice — whether it's a scam, why, and what to
 do next, including a ready-to-file police complaint draft.
 
 🔗 **Live app:** https://main.d2p4215h3yx9ec.amplifyapp.com
-🎥 **Demo video:** [YouTube] https://youtu.be/405M8XaA4NE?si=SobH_JpG4MdFeYuI
-📝 **Blog:** [ AWS Builder Center blog](https://builder.aws.com/content/3JaXJDoVJjDmIQnKzN894bvUFUb/raksha)
+🎥 **Demo video:** https://youtu.be/405M8XaA4NE?si=SobH_JpG4MdFeYuI
+📝 **Blog:** https://builder.aws.com/content/3JaXJDoVJjDmIQnKzN894bvUFUb/raksha
 
 ## The problem
 
